@@ -10,6 +10,7 @@ let me know if there is any optimisation can be done.
 ////////////////////////////////////////////////////////// Pseudo Code ////////////////////////////////////////////////////////
 
 ////////////////////////////////// <<< Main Program >>> /////////////////////////////////////
+
 int main() // Main code (head)
 {
     // Creating a blank image with white background with a size of 640 / 1080 pixels
@@ -49,19 +50,24 @@ int main() // Main code (head)
                  //Printing "Recalibration initiated" on the command line
              }
             else if (key == 'q') // Else statement for exiting the code if the user inputs ‘q’ on the keyboard
+            
             {
                 //Printing "Exiting the Code Bue byeee.." on the command line
                 // Break the execution
             }
+            
         } do while Loop For Recalibration // (Tail)
         if(key == 'y') // Get inside if the variable key is equal to ASCI value of ‘y’
+        
         {
             // Closing the Opened Windows
             //Capturing image data from webcam/external camera
+            
                 while (process) // while loop for displaying video frame by frame
                 {
-                    cap.read(image); // Reading the video file frame by frame and storing in Variable image
-                    // Calling the pre-processing function
+                   //cap.read(image); // Reading the video file frame by frame and storing in Variable image
+                   // Calling the pre-processing function
+                    
                    ///////// Displaying Text on the Screen ///////////
                     //Print text "Camera resolution = 640 x 480", on screen for instructions
                     //Print text "Please place the shapes for the measurement", on screen for instructions
