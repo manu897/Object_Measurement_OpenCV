@@ -26,7 +26,7 @@ double dia; // Declaring a dia variable
 int minArea = 400; // filter limit for area
 int cam = 2; // Camera Route
 double cov = 0.1000; // convertion into cm from mm
-double number; // Variable to store number of shapes in teh frame
+double number; // Variable to store number of shapes in the frame
 Mat image, imageBlur, gray, imageCanny, imageDilation, imageErod, pic, cot; // MAT is a matrix data type to handle all the images in OpenCV , MAT is a class in OpenCV library
 Mat kernelDia = getStructuringElement(MORPH_RECT, Size(3, 3)); // Declaring the kernel size for using in Dilation function
 Mat kernelErod = getStructuringElement(MORPH_RECT, Size(3, 3)); // Declaring the kernel size for using in Erod function
@@ -40,7 +40,7 @@ int key;
 void Preprocessing(Mat frame)
 {
     cvtColor(frame, gray, COLOR_BGR2GRAY); // Converting Coloured image into Grey
-    GaussianBlur(gray, imageBlur, Size(7,7), 3,0); // Applying Gaussian blur to teh image
+    GaussianBlur(gray, imageBlur, Size(7,7), 3,0); // Applying Gaussian blur to the image
     Canny(imageBlur, imageCanny, thresh1, thresh2); // Apply Canny function for edge detection
     //Mat kernel = getStructuringElement(MORPH_RECT, Size(3, 3)); // Declaring the kernel size for using in Dilation function
     dilate(imageCanny, imageDilation, kernelDia); // Using Dilate function on the canny image
