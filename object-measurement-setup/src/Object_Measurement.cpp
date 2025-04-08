@@ -1,3 +1,4 @@
+// filepath: /object-measurement-setup/object-measurement-setup/src/Object_Measurement.cpp
 //
 //  Object Measurement.cpp
 //  Machine Vision
@@ -18,7 +19,7 @@ int thresh1 = 25, thresh2 = 75;
 float Fs = 0.4, Ft = 1.95;
 double dia;
 int minArea = 400;
-int cam = 2;
+int cam = 0;
 double cov = 0.1000;
 double number;
 Mat image, imageBlur, gray, imageCanny, imageDilation, imageErod, pic, cot;
