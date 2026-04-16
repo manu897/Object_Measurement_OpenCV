@@ -60,5 +60,8 @@ private:
     UserIntent       pendingIntent_ = UserIntent::NONE;
     std::mutex       intentMutex_;
 
+    // Cached camera list so the mouse callback can route clicks correctly
+    std::vector<int> availableCameras_;
+
     static const char* kWindowName;
 };

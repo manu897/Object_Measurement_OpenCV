@@ -91,6 +91,11 @@ void AppController::tickWelcome()
     cv::Mat frame;
     capture_.read(frame);
 
+    if (frame.empty()) {
+        gui_->pollEvents(AppState::WELCOME);
+        return;
+    }
+
     cv::Mat emptyCanny;
     gui_->render(AppState::WELCOME,
                  frame,

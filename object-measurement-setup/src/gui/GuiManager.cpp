@@ -37,8 +37,7 @@ void GuiManager::onMouse(int event, int x, int y)
     UserIntent intent = UserIntent::NONE;
 
     if (lastState_ == AppState::CAMERA_SELECT) {
-        std::vector<int> dummy;   // available list handled in renderCameraSelect
-        cameraSelector_.onMouse(event, x, y, dummy);
+        cameraSelector_.onMouse(event, x, y, availableCameras_);
         // confirmed camera is checked via getSelectedCamera()
     } else {
         // Clicks in the side panel area
@@ -169,6 +168,7 @@ void GuiManager::compositeStatusBar(const CalibrationState& cal,
 void GuiManager::renderCameraSelect(const std::vector<int>& cameras)
 {
     lastState_ = AppState::CAMERA_SELECT;
+    availableCameras_ = cameras;
     // Pass current highlighted index to the renderer
     cameraSelector_.render(canvas_, cameras,
                             cameraSelector_.getHighlightedIndex());
